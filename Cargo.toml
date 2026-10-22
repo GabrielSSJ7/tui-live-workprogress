@@ -1,0 +1,18 @@
+[package]
+name = "tui-live-workprogress"
+version = "0.1.0"
+edition = "2021"
+description = "Questlog: D&D-flavored live TUI of project/demand progress, fed by files that LLM harnesses update"
+license = "MIT"
+
+[[bin]]
+name = "questlog"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+chrono = { version = "0.4", features = ["serde", "clock"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
